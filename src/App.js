@@ -1,24 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <main>
+      <header>
+        <a href="" className="logo">
+          MyBlog
         </a>
+        <nav>
+          <a href="">Login</a>
+          <a href="">Register</a>
+        </nav>
       </header>
-    </div>
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://techcrunch.com/wp-content/uploads/2022/06/tesla-autopilot-getty.jpeg?w=1390&crop=1"
+            alt="Tesla recalls"
+          />
+        </div>
+
+        <div className="texts">
+          <h2>Vehicles over FSD beta software safety concerns</h2>
+          <p className="info">
+            <a className="author">Kirsten Korosec</a>
+            <time> February 16, 2023 11:40 PM GMT+5:30</time>
+          </p>
+          <p className="summary">
+            Tesla has issued a recall of its Full Self-Driving software, an
+            advanced driver assistance system that federal safety regulators say
+            could allow a vehicle to act unsafe around intersections.
+          </p>
+        </div>
+      </div>
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://techcrunch.com/wp-content/uploads/2022/06/tesla-autopilot-getty.jpeg?w=1390&crop=1"
+            alt="Tesla recalls"
+          />
+        </div>
+
+        <div className="texts">
+          <h2>Vehicles over FSD beta software safety concerns</h2>
+          <p className="info">
+            <a className="author">Kirsten Korosec</a>
+            <time> February 16, 2023 11:40 PM GMT+5:30</time>
+          </p>
+          <p className="summary">
+            Tesla has issued a recall of its Full Self-Driving software, an
+            advanced driver assistance system that federal safety regulators say
+            could allow a vehicle to act unsafe around intersections.
+          </p>
+        </div>
+      </div>
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://techcrunch.com/wp-content/uploads/2022/06/tesla-autopilot-getty.jpeg?w=1390&crop=1"
+            alt="Tesla recalls"
+          />
+        </div>
+
+        <div className="texts">
+          <h2>Vehicles over FSD beta software safety concerns</h2>
+          <p className="info">
+            <a className="author">Kirsten Korosec</a>
+            <time> February 16, 2023 11:40 PM GMT+5:30</time>
+          </p>
+          <p className="summary">
+            Tesla has issued a recall of its Full Self-Driving software, an
+            advanced driver assistance system that federal safety regulators say
+            could allow a vehicle to act unsafe around intersections.
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
 
