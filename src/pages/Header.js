@@ -1,26 +1,28 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "./UserContext";
 
 export default function Header() {
-  const [email, setEmail] = useState(null);
-
+  const { setUserInfo, userInfo } = useContext(UserContext);
   useEffect(() => {
     fetch("http://localhost:8000/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
-        setEmail(userInfo.email);
+        setUserInfo(userInfo);
       });
     });
-  }, []);
+  }, [setUserInfo]);
 
   function logout() {
     fetch("http://localhost:8000/logout", {
       credentials: "include",
       method: "POST",
     });
-    setEmail(null);
+    setUserInfo(null);
   }
+
+  const email = userInfo?.email;
 
   return (
     <header>
